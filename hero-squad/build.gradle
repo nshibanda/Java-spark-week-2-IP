@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClassName = 'hero.squad.App'
+}
+
+applicationName = "hero-squad"
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.sparkjava:spark-core:2.9.4'
+    implementation 'org.postgresql:postgresql:42.6.0'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'com.sparkjava:spark-template-handlebars:2.7.1'
+    implementation 'org.slf4j:slf4j-simple:2.0.7'
+    implementation 'org.sql2o:sql2o:1.6.0'
+    implementation 'com.sparkjava:spark-template-velocity:2.7.1'
+    implementation 'org.apache.velocity:velocity:1.7'
+
+}
+
+test {
+    useJUnitPlatform()
+}
